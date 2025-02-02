@@ -1,15 +1,24 @@
 name: PullRequestEventActivityType
+run-name: started by @${{ github.actor }}
 on: 
   pull_request:
     type:
       - opened
+    branches:
+      - main
+    branches-ignore:
+      - qa
   workflow_dispatch:
   push:
     branches:
       - dev
       - 'feat*'
-    paths:
-      - '*.txt'
+    paths-ignore:
+      - '.github/*'
+    tags:
+      - v1.*
+    tags-ignore:
+      - v2
 jobs:
   deploy:
     runs-on: ubuntu-latest
