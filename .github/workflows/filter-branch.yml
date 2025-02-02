@@ -4,6 +4,12 @@ on:
     type:
       - opened
   workflow_dispatch:
+  push:
+    branches:
+      - dev
+      - 'feat*'
+    path:
+      - '*.txt'
 jobs:
   deploy:
     runs-on: ubuntu-latest
