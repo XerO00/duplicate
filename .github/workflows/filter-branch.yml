@@ -1,5 +1,5 @@
-name: PullRequestEventActivityType
-run-name: started by @${{ github.actor }}
+name: EventDeepDive
+run-name: Run ${{ run_number }} started by @${{ github.actor }} on ${{ ref }} for event ${{ event_name }}
 on: 
   pull_request:
     type:
