@@ -6,13 +6,11 @@ on:
       - opened
     branches:
       - main
-    branches-ignore:
-      - qa
   workflow_dispatch:
   push:
-    branches:
-      - dev
-      - 'feat*'
+    branches-ignore:
+      - qa
+      - main
     paths-ignore:
       - '.github/*'
     tags:
